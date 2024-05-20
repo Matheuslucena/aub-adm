@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { cn } from "@/lib/utils";
 import "./globals.css";
+import MainNav from "./ui/mainNav";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +17,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="h-full bg-gray-100">
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased h-full",
+          inter.variable
+        )}
+      >
+        <div className="h-screen">
+          <div className="flex flex-col h-full">
+            <MainNav />
+            <div className="flex-1">{children}</div>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }

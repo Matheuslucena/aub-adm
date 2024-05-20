@@ -1,0 +1,11 @@
+.ticket {
+  --mask: conic-gradient(
+      from -37.5deg at bottom,
+      #0000,
+      #000 1deg 74deg,
+      #0000 75deg
+    )
+    50%/33.76px 100%;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
