@@ -130,6 +130,7 @@ export default function Index() {
             onSend={handleSend}
             position={position}
             total={total}
+            item={currentItems[0]}
           />
         </div>
         <div className="hidden">

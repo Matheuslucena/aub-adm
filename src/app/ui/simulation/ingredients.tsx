@@ -33,12 +33,14 @@ export default function Ingredients({
   onSend,
   position,
   total,
+  item,
 }: {
   ingredients: any[];
   onUpdateList: any;
   onSend: any;
   position: number;
   total: number;
+  item: any;
 }) {
   const [selectedOnly, setSelectedOnly] = useState(false);
 
@@ -112,12 +114,18 @@ export default function Ingredients({
   return (
     <div className="flex flex-col h-full">
       <div className="p-4 border-b flex h-16">
-        <h1 className="text-2xl font-semibold text-gray-900">Ingredients</h1>
-        <div className="md:flex flex-row ml-auto hidden">
-          <Button variant="link" className="mr-5" onClick={handleClear}>
+        <h1 className=" truncate text-wrap text-2xl font-semibold text-gray-900">
+          {item !== undefined ? item.name : ""}
+        </h1>
+        <div className="md:flex flex-row ml-auto">
+          <Button
+            variant="link"
+            className="mr-5 md:flex hidden"
+            onClick={handleClear}
+          >
             Clear Selection
           </Button>
-          <div className="flex items-center space-x-2 mr-6">
+          <div className="md:flex items-center space-x-2 mr-6 hidden">
             <Switch checked={selectedOnly} onCheckedChange={handleSelected} />
             <Label htmlFor="airplane-mode">Only Selected</Label>
           </div>
