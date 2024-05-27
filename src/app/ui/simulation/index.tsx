@@ -17,18 +17,35 @@ export default function Index() {
   const [metrics, setMetrics] = useState({ mistakes: 0, corrects: 0 });
   const [openAlert, setOpenAlert] = useState(false);
   const [correct, setCorrect] = useState(false);
+  const [position, setPosition] = useState(0);
+  const [total, setTotal] = useState(0);
 
-  function getRandomItems(arr: any, limit: number) {
+  function getRandomItems(arr: any, limit: number, random: boolean) {
     const arrCopy = [...arr];
-    const shuffledList = arrCopy
-      .filter((i) => i.category === "BOWL" || i.category === "SALAD")
-      .sort(() => Math.random() - Math.random());
+    const shuffledList = arrCopy.filter(
+      (i) => i.category === "BOWL" || i.category === "SALAD"
+    );
 
-    return shuffledList.slice(0, limit);
+    setTotal(shuffledList.length - 1);
+
+    if (random) {
+      shuffledList.sort(() => Math.random() - Math.random());
+      return shuffledList.slice(0, limit);
+    }
+
+    let pos = position;
+    const listSize = shuffledList.length - 1;
+    if (listSize === pos) {
+      pos = 0;
+    }
+
+    const i = shuffledList.slice(pos, pos + 1);
+    setPosition(pos + 1);
+    return i;
   }
 
   const handleNextTicket = () => {
-    setCurrentItems(getRandomItems(items, 1));
+    setCurrentItems(getRandomItems(items, 1, false));
   };
 
   const handleIngredientUpdate = (ingredients: any) => {
@@ -93,7 +110,7 @@ export default function Index() {
   };
 
   useEffect(() => {
-    setCurrentItems(getRandomItems(items, 1));
+    setCurrentItems(getRandomItems(items, 1, false));
   }, []);
 
   return (
@@ -106,14 +123,16 @@ export default function Index() {
             onNextTicket={handleNextTicket}
           />
         </div>
-        <div className="border-r col-span-3">
+        <div className="border-r col-span-4">
           <Ingredients
             ingredients={ingredients}
             onUpdateList={handleIngredientUpdate}
             onSend={handleSend}
+            position={position}
+            total={total}
           />
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden">
           <Metrics metrics={metrics} />
         </div>
       </div>

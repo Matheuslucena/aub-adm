@@ -34,7 +34,7 @@ export default function IngredientItem({
   return (
     <div
       className={clsx(
-        "border-2 rounded-sm  bg-white w-32 h-32 shadow-md relative lg:hover:border-fuchsia-700 lg:hover:border-1 lg:hover:shadow-lg lg:hover:shadow-purple-800 hover:cursor-pointer",
+        "border-2 rounded-sm  bg-white w-32 h-36 shadow-md relative lg:hover:border-fuchsia-700 lg:hover:border-1 lg:hover:shadow-lg lg:hover:shadow-purple-800 hover:cursor-pointer",
         item.selected
           ? "border-fuchsia-700 border-1 shadow-lg shadow-purple-800"
           : "border-gray-500/[.60]"
@@ -47,7 +47,7 @@ export default function IngredientItem({
         alt={item.name}
         fill
       ></Image>
-      <div className="absolute bottom-0 p-1 w-full text-sm bg-gray-500/[.60] font-semibold">
+      <div className="truncate absolute bottom-0 p-1 w-full text-sm bg-gray-500/[.60] font-semibold">
         {item.name}
       </div>
     </div>

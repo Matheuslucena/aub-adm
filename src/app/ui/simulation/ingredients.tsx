@@ -3,6 +3,7 @@
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import { Progress } from "@/components/ui/progress";
 import { ingredients as ingredientsDB } from "@/data/ingredients";
 import { Button } from "@/components/ui/button";
 import IngredientItem from "./ingredientItem";
@@ -30,10 +31,14 @@ export default function Ingredients({
   ingredients,
   onUpdateList,
   onSend,
+  position,
+  total,
 }: {
   ingredients: any[];
   onUpdateList: any;
   onSend: any;
+  position: number;
+  total: number;
 }) {
   const [selectedOnly, setSelectedOnly] = useState(false);
 
@@ -119,7 +124,17 @@ export default function Ingredients({
           <Button onClick={handleSend}>SEND</Button>
         </div>
       </div>
-      <ScrollArea className="h-[calc(100vh-116px)]">
+      <div className="flex p-4 items-center border-b h-10">
+        <Progress
+          className="w-[25%] h-3"
+          value={(position * 100) / total}
+          max={total}
+        />
+        <div className="ml-2">
+          Progress: {position} / {total}
+        </div>
+      </div>
+      <ScrollArea className="h-[calc(100vh-156px)]">
         <div className="flex flex-col flex-wrap gap-2 p-4 pt-0 mt-4">
           {ingredientsList}
         </div>
