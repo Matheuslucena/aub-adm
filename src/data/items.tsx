@@ -2,14 +2,14 @@ export const items = [
   {
     id: 0,
     name: "Teri (GF, DF)",
-    desc: "chicken or organic tofu, turmeric rice, kale, broccoli, carrot salad, roasted onion with red bell pepper, cashew, teri sauce [organic soy], green onions, sesame, microgreens (contains nuts)",
+    desc: "chicken or organic tofu, turmeric rice, kale, broccoli, carrot salad, roasted onions with red bell pepper, cashew, teri sauce [organic soy], green onions, sesame seeds, microgreens",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240207203144674/md/Teri%20Bowl%20%28GF%2C%20DF%29.jpg",
     category: "BOWL",
   },
   {
     id: 1,
     name: "Rio Bowl (GF, DF)",
-    desc: "chicken, seasoned kale, turmeric rice, black beans, lime tomato vinaigrette, roasted onions, avocado, microgreens, with cilantro jalapeno cashew dressing. (has nuts)",
+    desc: "chicken, seasoned kale, turmeric rice, black beans, lime tomato vinaigrette, roasted onions, avocado (half), microgreens, cilantro jalapeno cashew (GF DF) [has nuts]",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240221192257452/md/Rio%20Bowl%20%28GF%2C%20DF%29.jpg",
     category: "BOWL",
   },

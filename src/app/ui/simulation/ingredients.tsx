@@ -7,7 +7,7 @@ import { Progress } from "@/components/ui/progress";
 import { ingredients as ingredientsDB } from "@/data/ingredients";
 import { Button } from "@/components/ui/button";
 import IngredientItem from "./ingredientItem";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 interface Ingredient {
   id: number;
@@ -43,6 +43,7 @@ export default function Ingredients({
   item: any;
 }) {
   const [selectedOnly, setSelectedOnly] = useState(false);
+  const scrollDivRef = useRef(null);
 
   const categories = [
     //"TYPE",
@@ -142,7 +143,7 @@ export default function Ingredients({
           Progress: {position} / {total}
         </div>
       </div>
-      <ScrollArea className="h-[calc(100vh-156px)]">
+      <ScrollArea className="h-[calc(100vh-156px)]" ref={scrollDivRef}>
         <div className="flex flex-col flex-wrap gap-2 p-4 pt-0 mt-4">
           {ingredientsList}
         </div>

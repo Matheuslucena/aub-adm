@@ -491,12 +491,6 @@ export const ingredients = [
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Coconut%20Curry.jpg",
   },
   {
-    id: 93,
-    name: "Red bell pepper",
-    category: "TOSS_IN",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/add%20bell%20peppers.jpg",
-  },
-  {
     id: 95,
     name: "Raisin",
     category: "TOSS_IN",
