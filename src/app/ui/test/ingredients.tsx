@@ -65,9 +65,9 @@ export default function Ingredients({
 
   const handleSend = (e: any) => {
     onSend(e);
-    scrollRef
-      .current!.getElementsByTagName("div")[0]
-      .scrollTo({ top: 0, behavior: "auto" });
+    // if(scrollRef.current != null){
+    //   scrollRef.current?.getElementsByTagName("div")[0].scrollTo({ top: 0, behavior: "auto" });
+    // }
   };
 
   return (
