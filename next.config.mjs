@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   //basePath: "/aub-adm",
-  output: "export",
+  //output: "export",
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
