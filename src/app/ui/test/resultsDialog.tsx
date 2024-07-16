@@ -87,7 +87,11 @@ export default function ResultsDialog({
                     </div>
                   )}
                   {item.wrongAnswers.map((wrong: string) => {
-                    return <p className="text-sm ml-1 italic">{wrong}</p>;
+                    return (
+                      <p key={wrong} className="text-sm ml-1 italic">
+                        {wrong}
+                      </p>
+                    );
                   })}
                   {item.missingAnswers.length > 0 && (
                     <div className="text-sm capitalize font-semibold">
@@ -95,7 +99,11 @@ export default function ResultsDialog({
                     </div>
                   )}
                   {item.missingAnswers.map((miss: string) => {
-                    return <p className="text-sm ml-1 italic">{miss}</p>;
+                    return (
+                      <p key={miss} className="text-sm ml-1 italic">
+                        {miss}
+                      </p>
+                    );
                   })}
                 </div>
               </div>

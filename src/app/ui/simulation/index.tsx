@@ -109,9 +109,9 @@ export default function Index() {
     setOpenAlert(true);
   };
 
-  useEffect(() => {
-    setCurrentItems(getRandomItems(items, 1, false));
-  }, []);
+  // useEffect(() => {
+  //   setCurrentItems(getRandomItems(items, 1, false));
+  // }, []);
 
   return (
     <>

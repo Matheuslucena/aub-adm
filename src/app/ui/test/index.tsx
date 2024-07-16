@@ -9,6 +9,12 @@ import ResultsDialog from "./resultsDialog";
 import InfoDialog from "./infoDialog";
 import axios from "axios";
 
+interface UserInfo {
+  punchId: string;
+  name: string;
+  location: string;
+}
+
 export default function Index() {
   const [products, setProducts] = useState([...productsData]);
   const [ingredients, setIngredients] = useState([...ingredientsData]);
@@ -17,10 +23,14 @@ export default function Index() {
   const [openAlert, setOpenAlert] = useState(false);
   const [score, setScore] = useState("");
   const [openInfoDialog, setOpenInfoDialog] = useState(false);
-  const [userInfo, setUserInfo] = useState({});
+  const [userInfo, setUserInfo] = useState<UserInfo>({
+    punchId: "",
+    name: "",
+    location: "",
+  });
 
   const filteredProducts = products.filter(
-    (i) => i.category === "BOWLsss" || i.category === "SALAD"
+    (i) => i.category === "BOWL" || i.category === "SALAD"
   );
 
   const currentProduct = filteredProducts[currentProductIdx];
@@ -110,7 +120,11 @@ export default function Index() {
     setCurrentProductIdx(0);
     setAnswers([]);
     setOpenInfoDialog(true);
-    setUserInfo({});
+    setUserInfo({
+      punchId: "",
+      name: "",
+      location: "",
+    });
     //Restart test
   };
 
