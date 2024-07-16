@@ -1,18 +1,26 @@
 "use client";
+
 import { items as productsData } from "@/data/items";
 import { ingredients as ingredientsData } from "@/data/ingredients";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Ingredients from "./ingredients";
 import Selected from "./selected";
+import ResultsDialog from "./resultsDialog";
+import InfoDialog from "./infoDialog";
+import axios from "axios";
 
 export default function Index() {
   const [products, setProducts] = useState([...productsData]);
   const [ingredients, setIngredients] = useState([...ingredientsData]);
   const [currentProductIdx, setCurrentProductIdx] = useState(0);
   const [answers, setAnswers] = useState(Array<any>);
+  const [openAlert, setOpenAlert] = useState(false);
+  const [score, setScore] = useState("");
+  const [openInfoDialog, setOpenInfoDialog] = useState(false);
+  const [userInfo, setUserInfo] = useState({});
 
   const filteredProducts = products.filter(
-    (i) => i.category === "BOWL" || i.category === "SALAD"
+    (i) => i.category === "BOWLsss" || i.category === "SALAD"
   );
 
   const currentProduct = filteredProducts[currentProductIdx];
@@ -32,9 +40,13 @@ export default function Index() {
     "PREMIUM",
     "HERBS",
     "DRESSING",
-    "BREAD",
+    //"BREAD",
     //"OTHER",
   ];
+
+  useEffect(() => {
+    setOpenInfoDialog(true);
+  }, []);
 
   //Finishes the product
   const handleOnSend = () => {
@@ -70,7 +82,41 @@ export default function Index() {
   };
 
   const showResults = () => {
-    console.log(answers);
+    console.log("ANSWER ==== ", JSON.stringify(answers));
+    const correctAnswers = answers.filter((item) => item.correct).length;
+    const correctPercentage = (correctAnswers / answers.length) * 100;
+
+    setScore(correctPercentage.toFixed(1));
+    setOpenAlert(true);
+
+    const body = {
+      date: new Date().toISOString(),
+      id: userInfo.punchId,
+      employee: userInfo.name,
+      score: correctPercentage.toFixed(2),
+      location: userInfo.location,
+      answers: [...answers],
+    };
+    fetch("/.netlify/functions/hello", {
+      method: "POST",
+      body: JSON.stringify(body),
+    })
+      .then((response) => response.json())
+      .catch((error) => console.error("Error fetching data:", error));
+  };
+
+  const handleCloseResultsDialog = () => {
+    setOpenAlert(false);
+    setCurrentProductIdx(0);
+    setAnswers([]);
+    setOpenInfoDialog(true);
+    setUserInfo({});
+    //Restart test
+  };
+
+  const handleStartTest = (data: any) => {
+    setUserInfo(data);
+    setOpenInfoDialog(false);
   };
 
   return (
@@ -96,6 +142,17 @@ export default function Index() {
           />
         </div>
       </div>
+      <ResultsDialog
+        open={openAlert}
+        onClose={handleCloseResultsDialog}
+        items={answers}
+        score={score}
+      />
+      <InfoDialog
+        open={openInfoDialog}
+        onClose={() => {}}
+        onStart={(data: any) => handleStartTest(data)}
+      />
     </>
   );
 }
@@ -152,7 +209,12 @@ const checkAnswer = (product: any, selectedIngredients: Array<any>) => {
   const missingAnswers = correctAnswers;
   const correct = wrongAnswers.length == 0 && missingAnswers.length == 0;
 
-  return { correct, wrongAnswers, missingAnswers };
+  return {
+    product: { id: product.id, name: product.name },
+    correct,
+    wrongAnswers,
+    missingAnswers,
+  };
 };
 
 const nextProductIdx = (idx: number, total: number) => {

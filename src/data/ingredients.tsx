@@ -25,7 +25,7 @@ export const ingredients = [
   },
   {
     id: 78,
-    name: "Almond-Wild Rice",
+    name: "Almond Wild Rice",
     category: "BASE",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Almond%20Wild%20Rice.jpg",
   },
@@ -252,7 +252,7 @@ export const ingredients = [
   },
   {
     id: 40,
-    name: "Chick Peas",
+    name: "Chickpeas",
     category: "TOSS_IN",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/chick%20peas.jpg",
   },
@@ -519,6 +519,18 @@ export const ingredients = [
     name: "Sesame Seeds",
     category: "TOSS_IN",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/Sesame%20Seeds.png",
+  },
+  {
+    id: 100,
+    name: "Slivered Almond",
+    category: "TOSS_IN",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+  },
+  {
+    id: 101,
+    name: "Radish",
+    category: "TOSS_IN",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
   },
 ];
 export type Ingredient = (typeof ingredients)[number];

@@ -6,7 +6,7 @@ export default function MainNav() {
       {/* Move to MainNav component */}
       <nav className="mx-6 flex items-center space-x-4 lg:space-x-6">
         <Link
-          href="/simulation"
+          href="/"
           className="text-sm font-medium transition-colors hover:text-green-200"
         >
           Ticket Simulation

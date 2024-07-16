@@ -3,7 +3,7 @@ const nextConfig = {
   //basePath: "/aub-adm",
   //output: "export",
   images: {
-    unoptimized: true,
+    //unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
