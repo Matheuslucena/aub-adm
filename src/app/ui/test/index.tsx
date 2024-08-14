@@ -7,7 +7,7 @@ import Ingredients from "./ingredients";
 import Selected from "./selected";
 import ResultsDialog from "./resultsDialog";
 import InfoDialog from "./infoDialog";
-import { userInfoState } from "@/context/userInfoContext";
+import { useInfoState } from "@/context/userInfoContext";
 import Quiz from "./quiz";
 
 interface UserInfo {
@@ -17,7 +17,7 @@ interface UserInfo {
 }
 
 export default function Index() {
-  const { userInfoValue, setUserInfoState } = userInfoState();
+  const { userInfoValue, setUserInfoState } = useInfoState();
   const [products, setProducts] = useState([...productsData]);
   const [ingredients, setIngredients] = useState([...ingredientsData]);
   const [currentProductIdx, setCurrentProductIdx] = useState(0);
@@ -100,7 +100,7 @@ export default function Index() {
 
   useEffect(() => {
     //setOpenInfoDialog(true);
-    console.log(userInfoValue);
+    //console.log(userInfoValue);
   }, []);
 
   //Finishes the product

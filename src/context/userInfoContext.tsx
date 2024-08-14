@@ -13,4 +13,4 @@ export const UserInfoProvider = ({ children }: any) => {
   );
 };
 
-export const userInfoState = () => useContext(UserInfoContext);
+export const useInfoState = () => useContext(UserInfoContext);
