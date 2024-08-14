@@ -34,11 +34,14 @@ export default function Index() {
 
   const filteredProducts = products.filter(
     (i) =>
-      (userInfoValue.type === "Server" &&
+      (userInfoValue !== undefined &&
+        userInfoValue.type === "Server" &&
         (i.category === "BOWL" ||
           i.category === "SALAD" ||
           i.category === "MELTS")) ||
-      (userInfoValue.type === "Smoothie" && i.category === "SMOOTHIE")
+      (userInfoValue !== undefined &&
+        userInfoValue.type === "Smoothie" &&
+        i.category === "SMOOTHIE")
   );
 
   const currentProduct = filteredProducts[currentProductIdx];
