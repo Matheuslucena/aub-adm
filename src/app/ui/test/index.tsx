@@ -32,16 +32,15 @@ export default function Index() {
     location: "",
   });
 
+  const type = userInfoValue ? userInfoValue.type : "Server";
+
   const filteredProducts = products.filter(
     (i) =>
-      (userInfoValue !== undefined &&
-        userInfoValue.type === "Server" &&
+      (type === "Server" &&
         (i.category === "BOWL" ||
           i.category === "SALAD" ||
           i.category === "MELTS")) ||
-      (userInfoValue !== undefined &&
-        userInfoValue.type === "Smoothie" &&
-        i.category === "SMOOTHIE")
+      (type === "Smoothie" && i.category === "SMOOTHIE")
   );
 
   const currentProduct = filteredProducts[currentProductIdx];
@@ -65,40 +64,42 @@ export default function Index() {
     //"OTHER",
   ];
 
-  switch (userInfoValue.type) {
-    case "Server":
-      ingredientCategory = [
-        //"TYPE",
-        "GREEN",
-        "BASE",
-        "PROTEIN",
-        "TOSS_IN",
-        "PREMIUM",
-        "HERBS",
-        "DRESSING",
-        "BREAD",
-        //"OTHER",
-      ];
-      break;
-    case "Breakfast":
-      ingredientCategory = [
-        //"TYPE",
-        "GREEN",
-        "BASE",
-        "PROTEIN",
-        "TOSS_IN",
-        "PREMIUM",
-        "HERBS",
-        "DRESSING",
-        "BREAD",
-        //"OTHER",
-      ];
-      break;
-    case "Smoothie":
-      ingredientCategory = ["MILK", "SMOOTHIE_IN"];
-      break;
-    default:
-      break;
+  if (userInfoValue) {
+    switch (userInfoValue.type) {
+      case "Server":
+        ingredientCategory = [
+          //"TYPE",
+          "GREEN",
+          "BASE",
+          "PROTEIN",
+          "TOSS_IN",
+          "PREMIUM",
+          "HERBS",
+          "DRESSING",
+          "BREAD",
+          //"OTHER",
+        ];
+        break;
+      case "Breakfast":
+        ingredientCategory = [
+          //"TYPE",
+          "GREEN",
+          "BASE",
+          "PROTEIN",
+          "TOSS_IN",
+          "PREMIUM",
+          "HERBS",
+          "DRESSING",
+          "BREAD",
+          //"OTHER",
+        ];
+        break;
+      case "Smoothie":
+        ingredientCategory = ["MILK", "SMOOTHIE_IN"];
+        break;
+      default:
+        break;
+    }
   }
 
   useEffect(() => {
@@ -226,11 +227,7 @@ export default function Index() {
         onClose={() => {}}
         onStart={(data: any) => handleStartTest(data)}
       />
-      <Quiz
-        open={openQuiz}
-        onSubmit={handleSubmitQuiz}
-        testType={userInfoValue.type}
-      ></Quiz>
+      <Quiz open={openQuiz} onSubmit={handleSubmitQuiz} testType={type}></Quiz>
     </>
   );
 }
