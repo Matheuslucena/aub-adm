@@ -9,7 +9,7 @@ export default function MainNav() {
           href="/"
           className="text-sm font-medium transition-colors hover:text-green-200"
         >
-          Ticket Simulation
+          Menu Training
         </Link>
       </nav>
     </div>

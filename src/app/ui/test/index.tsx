@@ -7,7 +7,8 @@ import Ingredients from "./ingredients";
 import Selected from "./selected";
 import ResultsDialog from "./resultsDialog";
 import InfoDialog from "./infoDialog";
-import axios from "axios";
+import { userInfoState } from "@/context/userInfoContext";
+import Quiz from "./quiz";
 
 interface UserInfo {
   punchId: string;
@@ -16,11 +17,13 @@ interface UserInfo {
 }
 
 export default function Index() {
+  const { userInfoValue, setUserInfoState } = userInfoState();
   const [products, setProducts] = useState([...productsData]);
   const [ingredients, setIngredients] = useState([...ingredientsData]);
   const [currentProductIdx, setCurrentProductIdx] = useState(0);
   const [answers, setAnswers] = useState(Array<any>);
   const [openAlert, setOpenAlert] = useState(false);
+  const [openQuiz, setOpenQuiz] = useState(false);
   const [score, setScore] = useState("");
   const [openInfoDialog, setOpenInfoDialog] = useState(false);
   const [userInfo, setUserInfo] = useState<UserInfo>({
@@ -30,7 +33,12 @@ export default function Index() {
   });
 
   const filteredProducts = products.filter(
-    (i) => i.category === "BOWL" || i.category === "SALAD"
+    (i) =>
+      (userInfoValue.type === "Server" &&
+        (i.category === "BOWL" ||
+          i.category === "SALAD" ||
+          i.category === "MELTS")) ||
+      (userInfoValue.type === "Smoothie" && i.category === "SMOOTHIE")
   );
 
   const currentProduct = filteredProducts[currentProductIdx];
@@ -41,7 +49,7 @@ export default function Index() {
     current: currentProductIdx + 1,
   };
 
-  const ingredientCategory = [
+  let ingredientCategory = [
     //"TYPE",
     "GREEN",
     "BASE",
@@ -50,12 +58,49 @@ export default function Index() {
     "PREMIUM",
     "HERBS",
     "DRESSING",
-    //"BREAD",
+    "BREAD",
     //"OTHER",
   ];
 
+  switch (userInfoValue.type) {
+    case "Server":
+      ingredientCategory = [
+        //"TYPE",
+        "GREEN",
+        "BASE",
+        "PROTEIN",
+        "TOSS_IN",
+        "PREMIUM",
+        "HERBS",
+        "DRESSING",
+        "BREAD",
+        //"OTHER",
+      ];
+      break;
+    case "Breakfast":
+      ingredientCategory = [
+        //"TYPE",
+        "GREEN",
+        "BASE",
+        "PROTEIN",
+        "TOSS_IN",
+        "PREMIUM",
+        "HERBS",
+        "DRESSING",
+        "BREAD",
+        //"OTHER",
+      ];
+      break;
+    case "Smoothie":
+      ingredientCategory = ["MILK", "SMOOTHIE_IN"];
+      break;
+    default:
+      break;
+  }
+
   useEffect(() => {
-    setOpenInfoDialog(true);
+    //setOpenInfoDialog(true);
+    console.log(userInfoValue);
   }, []);
 
   //Finishes the product
@@ -63,7 +108,7 @@ export default function Index() {
     const total = filteredProducts.length;
     setAnswers([...answers, checkAnswer(currentProduct, selectedIngredients)]);
     if (isTestFinished(currentProductIdx, total)) {
-      showResults();
+      showQuiz();
       return;
     }
 
@@ -91,6 +136,10 @@ export default function Index() {
     setIngredients(updatedList);
   };
 
+  const showQuiz = () => {
+    setOpenQuiz(true);
+  };
+
   const showResults = () => {
     console.log("ANSWER ==== ", JSON.stringify(answers));
     const correctAnswers = answers.filter((item) => item.correct).length;
@@ -101,10 +150,11 @@ export default function Index() {
 
     const body = {
       date: new Date().toISOString(),
-      id: userInfo.punchId,
-      employee: userInfo.name,
+      id: userInfoValue.punchId,
+      employee: userInfoValue.name,
       score: correctPercentage.toFixed(2),
-      location: userInfo.location,
+      location: userInfoValue.location,
+      type: userInfoValue.type,
       answers: [...answers],
     };
     fetch("/.netlify/functions/hello", {
@@ -119,13 +169,19 @@ export default function Index() {
     setOpenAlert(false);
     setCurrentProductIdx(0);
     setAnswers([]);
-    setOpenInfoDialog(true);
+    setOpenQuiz(false);
+    //setOpenInfoDialog(true);
     setUserInfo({
       punchId: "",
       name: "",
       location: "",
     });
     //Restart test
+  };
+
+  const handleSubmitQuiz = () => {
+    setOpenQuiz(false);
+    showResults();
   };
 
   const handleStartTest = (data: any) => {
@@ -167,6 +223,11 @@ export default function Index() {
         onClose={() => {}}
         onStart={(data: any) => handleStartTest(data)}
       />
+      <Quiz
+        open={openQuiz}
+        onSubmit={handleSubmitQuiz}
+        testType={userInfoValue.type}
+      ></Quiz>
     </>
   );
 }

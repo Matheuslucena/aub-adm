@@ -39,7 +39,7 @@ export default function InfoDialog({
   const [formData, setFormData] = useState({
     name: "",
     punchId: "",
-    location: "",
+    location: "American Fork",
   });
 
   const handleChange = (e: any) => {

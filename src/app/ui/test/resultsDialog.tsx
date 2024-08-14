@@ -8,6 +8,7 @@ import {
   DialogTitle,
   DialogClose,
 } from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -140,7 +141,11 @@ export default function ResultsDialog({
               </TabsTrigger>
             </TabsList>
             <TabsContent value="correct">{correct}</TabsContent>
-            <TabsContent value="incorrect">{incorrect}</TabsContent>
+            <TabsContent value="incorrect">
+              <ScrollArea className="h-[calc(100vh-650px)]">
+                {incorrect}
+              </ScrollArea>
+            </TabsContent>
           </Tabs>
         </div>
         <DialogFooter>
