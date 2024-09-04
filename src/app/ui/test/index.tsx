@@ -40,7 +40,9 @@ export default function Index() {
         (i.category === "BOWL" ||
           i.category === "SALAD" ||
           i.category === "MELTS")) ||
-      (type === "Smoothie" && i.category === "SMOOTHIE")
+      (type === "Smoothie" && i.category === "SMOOTHIE") ||
+      i.category === "SMOOTHIE_ICE" ||
+      (type === "Breakfast" && i.category === "BREAKFAST")
   );
 
   const currentProduct = filteredProducts[currentProductIdx];
@@ -83,19 +85,23 @@ export default function Index() {
       case "Breakfast":
         ingredientCategory = [
           //"TYPE",
+          "BREAD",
+          "CREAM",
           "GREEN",
-          "BASE",
-          "PROTEIN",
           "TOSS_IN",
           "PREMIUM",
           "HERBS",
           "DRESSING",
-          "BREAD",
           //"OTHER",
         ];
         break;
       case "Smoothie":
-        ingredientCategory = ["MILK", "SMOOTHIE_IN"];
+        ingredientCategory = [
+          "MILK",
+          "SMOOTHIE_SWEETENER",
+          "SMOOTHIE_IN",
+          "SMOOTHIE_FROZEN",
+        ];
         break;
       default:
         break;

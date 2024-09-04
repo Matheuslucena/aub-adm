@@ -1,7 +1,7 @@
 //Script to get data from page:
 //https://order.incentivio.com/c/Auberginekitchen/locations/stgeorge/menu?mik=65c16e3ba4363a25bd06b8c4.65c16e3ba4363a25bd06b7f7.65c16e3ba4363a25bd06b7ed
 
-//Ingredients List
+//Ingredients List (USE THIS ONE)
 var spans = document.querySelectorAll(
   ".MuiTypography-root.MuiFormControlLabel-label"
 );
@@ -25,7 +25,7 @@ JSON.stringify(result);
 //Items list
 var cards = document.querySelectorAll("[data-testid='MenuCard']");
 var result = [];
-for (let index = 0; index < spans.length; index++) {
+for (let index = 0; index < cards.length; index++) {
   var name = cards[index].querySelector(
     "[data-testid='MenuCard.Title']"
   ).innerText;

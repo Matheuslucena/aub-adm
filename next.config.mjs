@@ -17,6 +17,12 @@ const nextConfig = {
         port: "",
         pathname: "/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.pixieset.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };

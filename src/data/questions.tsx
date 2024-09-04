@@ -318,6 +318,129 @@ export const questions = [
     correct: 3,
     type: "Smoothie",
   },
+  {
+    id: 17,
+    question: "Which of the following items does not contain nuts?",
+    options: [
+      { id: 1, text: "egg avocado bowl" },
+      {
+        id: 2,
+        text: "wake up call",
+      },
+      {
+        id: 3,
+        text: "almond berry toast",
+      },
+    ],
+    correct: 1,
+    type: "Breakfast",
+  },
+  {
+    id: 18,
+    question: "Which of the items below contains gluten?",
+    options: [
+      { id: 1, text: "egg avocado bowl" },
+      {
+        id: 2,
+        text: "wake up call",
+      },
+      {
+        id: 3,
+        text: "almond berry toast",
+      },
+    ],
+    correct: 2,
+    type: "Breakfast",
+  },
+  {
+    id: 19,
+    question: "Which of the items below contains dairy?",
+    options: [
+      { id: 1, text: "egg avocado bowl" },
+      {
+        id: 2,
+        text: "wake up call",
+      },
+      {
+        id: 3,
+        text: "Avocado smash toast",
+      },
+    ],
+    correct: 1,
+    type: "Breakfast",
+  },
+  {
+    id: 20,
+    question: "What is the main base we use in our cheesecake?",
+    options: [
+      { id: 1, text: "wheat" },
+      {
+        id: 2,
+        text: "rice flour",
+      },
+      {
+        id: 3,
+        text: "almond flour",
+      },
+      {
+        id: 4,
+        text: "corn flour",
+      },
+    ],
+    correct: 3,
+    type: "Smoothie",
+  },
+  {
+    id: 21,
+    question: "What does the acronym NAS means on food?",
+    options: [
+      { id: 1, text: "No Added Sugar" },
+      {
+        id: 2,
+        text: "No Added Salt",
+      },
+      {
+        id: 3,
+        text: "none of the above",
+      },
+    ],
+    correct: 1,
+    type: "Smoothie",
+  },
+  {
+    id: 21,
+    question: "Which of our dressings does not contain olive oil?",
+    options: [
+      { id: 1, text: "mango, walnut balsamic, signature " },
+      {
+        id: 2,
+        text: "walnut balsamic, sriracha, cashew cilantro ",
+      },
+      {
+        id: 3,
+        text: "tahini, peanut, walnut balsamic",
+      },
+    ],
+    correct: 3,
+    type: "Smoothie",
+  },
+  {
+    id: 22,
+    question: "Our desserts are sweetened with?",
+    options: [
+      { id: 1, text: "dates, monk fruit, stevia" },
+      {
+        id: 2,
+        text: "dates, allulose, monk fruit",
+      },
+      {
+        id: 3,
+        text: "dates, sugar, allulose",
+      },
+    ],
+    correct: 2,
+    type: "Smoothie",
+  },
 ];
 
 export type Question = (typeof questions)[number];
