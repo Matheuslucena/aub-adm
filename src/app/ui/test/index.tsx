@@ -40,7 +40,8 @@ export default function Index() {
       (type === "Server" &&
         (i.category === "BOWL" ||
           i.category === "SALAD" ||
-          i.category === "MELTS")) ||
+          i.category === "MELTS" ||
+          i.category === "STARTERS")) ||
       (type === "Smoothie" &&
         (i.category === "SMOOTHIE" || i.category === "SMOOTHIE_ICE")) ||
       (type === "Breakfast" && i.category === "BREAKFAST")
@@ -59,8 +60,8 @@ export default function Index() {
     "GREEN",
     "BASE",
     "PROTEIN",
-    "TOSS_IN",
     "PREMIUM",
+    "TOSS_IN",
     "HERBS",
     "DRESSING",
     "BREAD",

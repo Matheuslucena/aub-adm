@@ -181,7 +181,7 @@ export const ingredients = [
   {
     id: 24,
     name: "Cheesebread",
-    category: "BREAD",
+    category: "BREAD_HIDE",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Gluten-free%20cheesebread.jpg",
   },
   {
@@ -999,6 +999,24 @@ export const ingredients = [
     name: "Chocolate Cookie",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240207203144674/md/Chocolate%20Chip%20Cookie%20%28GF%2C%20DF%2C%20No%20added%20sugar%29.jpg",
     category: "SMOOTHIE_IN",
+  },
+  {
+    id: 181,
+    name: "Walnut Pesto",
+    src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/Riverton%20-%20Signature%20Sesame%20%28GF%2C%20V%29SM-66625b60_1.jpg",
+    category: "PREMIUM",
+  },
+  {
+    id: 182,
+    name: "Cashew Cream",
+    src: "https://images.pixieset.com/69852402/8d8723142b769c4870c388b636f1fc95-xxlarge.jpg",
+    category: "PREMIUM",
+  },
+  {
+    id: 183,
+    name: "Paprika",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "TOSS_IN",
   },
 ];
 export type Ingredient = (typeof ingredients)[number];
