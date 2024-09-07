@@ -20,6 +20,7 @@ export default function Index() {
   const router = useRouter();
   const { userInfoValue, setUserInfoState } = useInfoState();
   const locations = [
+    "Sugar House",
     "St. George",
     "Draper",
     "Orem",

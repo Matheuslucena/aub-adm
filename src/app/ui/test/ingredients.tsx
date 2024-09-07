@@ -84,7 +84,7 @@ export default function Ingredients({
           >
             Clear Selection
           </Button>
-          <Button onClick={handleSend}>SEND</Button>
+          <Button onClick={handleSend}>NEXT ITEM</Button>
         </div>
       </div>
       <div className="flex p-4 items-center border-b h-10">

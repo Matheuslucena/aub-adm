@@ -34,14 +34,15 @@ export default function Index() {
 
   const type = userInfoValue ? userInfoValue.type : "Server";
 
+  //LIST OF ITEMS BY TYPE
   const filteredProducts = products.filter(
     (i) =>
       (type === "Server" &&
         (i.category === "BOWL" ||
           i.category === "SALAD" ||
           i.category === "MELTS")) ||
-      (type === "Smoothie" && i.category === "SMOOTHIE") ||
-      i.category === "SMOOTHIE_ICE" ||
+      (type === "Smoothie" &&
+        (i.category === "SMOOTHIE" || i.category === "SMOOTHIE_ICE")) ||
       (type === "Breakfast" && i.category === "BREAKFAST")
   );
 
@@ -87,9 +88,9 @@ export default function Index() {
           //"TYPE",
           "BREAD",
           "CREAM",
-          "GREEN",
-          "TOSS_IN",
-          "PREMIUM",
+          "GREEN_B",
+          "TOSS_IN_B",
+          "PREMIUM_B",
           "HERBS",
           "DRESSING",
           //"OTHER",

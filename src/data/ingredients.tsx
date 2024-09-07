@@ -140,7 +140,7 @@ export const ingredients = [
     id: 17,
     name: "Signature Sesame (GF, V)",
     category: "DRESSING",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Signature%20sesame%20dressing%20%28gf%2C%20vegan%29.jpg",
+    src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/Riverton%20-%20Signature%20Sesame%20%28GF%2C%20V%29SM-66625b60_1.jpg",
   },
   {
     id: 18,
@@ -235,13 +235,13 @@ export const ingredients = [
   {
     id: 36,
     name: "Blueberry",
-    category: "TOSS_IN",
+    category: "PREMIUM",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214215205758/sm/Blueberry.jpg",
   },
   {
     id: 37,
     name: "Strawberry",
-    category: "TOSS_IN",
+    category: "PREMIUM",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/Strawberry.jpg",
   },
   {
@@ -265,7 +265,7 @@ export const ingredients = [
   {
     id: 42,
     name: "mango",
-    category: "PREMIUM",
+    category: "TOSS_IN",
     src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/American%20Fork%20-%20MangoSM-66567e96_1.png",
   },
   {
@@ -301,7 +301,7 @@ export const ingredients = [
   {
     id: 48,
     name: "Walnut",
-    category: "TOSS_IN",
+    category: "PREMIUM",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/Walnut.png",
   },
   {
@@ -343,7 +343,7 @@ export const ingredients = [
   {
     id: 55,
     name: "Cashew",
-    category: "TOSS_IN",
+    category: "PREMIUM",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214214521418/sm/add%20cashews.jpg",
   },
   {
@@ -361,7 +361,7 @@ export const ingredients = [
   {
     id: 62,
     name: "Pomegranate Seeds",
-    category: "TOSS_IN",
+    category: "PREMIUM",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/add%20Pomegranate.jpg",
   },
   {
@@ -458,7 +458,7 @@ export const ingredients = [
     id: 84,
     name: "Red Cabbage Salad",
     category: "PREMIUM",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191040913/sm/Red%20Cabbage%20Salad.jpg",
+    src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/American%20Fork%20-%20Red%20CabbageSM-66a27153_1.jpg",
   },
   {
     id: 86,
@@ -476,7 +476,7 @@ export const ingredients = [
     id: 88,
     name: "Roasted Onions",
     category: "PREMIUM",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214215205758/sm/Roasted%20Onions.jpg",
+    src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/American%20Fork%20-%20Roasted%20OnionSM-66a40040_1.jpg",
   },
   {
     id: 89,
@@ -500,7 +500,7 @@ export const ingredients = [
     id: 96,
     name: "Carrot Salad",
     category: "PREMIUM",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/add%20carrot%20salad.jpg",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Carrot%20Salad.jpg",
   },
   {
     id: 97,
@@ -552,14 +552,14 @@ export const ingredients = [
   },
   {
     id: 105,
-    name: "Coconut",
+    name: "Coconut Chips",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/Coconut.jpg",
     category: "SMOOTHIE_IN",
   },
   {
     id: 106,
     name: "Spinach",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214215205758/sm/Spinach%3AKale.jpg",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Baby%20Spinach.jpg",
     category: "SMOOTHIE_IN",
   },
   {
@@ -590,18 +590,12 @@ export const ingredients = [
     id: 111,
     name: "Spirulina",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Spirulina.jpg",
-    category: "SMOOTHIE_IN",
+    category: "SMOOTHIE_IN_OLD",
   },
   {
     id: 112,
     name: "Whey Protein",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Whey%20Protein.jpg",
-    category: "SMOOTHIE_IN",
-  },
-  {
-    id: 113,
-    name: "Blue Spirulina",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Blue%20Spirulina.jpg",
     category: "SMOOTHIE_IN",
   },
   {
@@ -612,7 +606,7 @@ export const ingredients = [
   },
   {
     id: 115,
-    name: "Collagen",
+    name: "Vanilla Collagen",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Collagen.jpg",
     category: "SMOOTHIE_IN",
   },
@@ -653,7 +647,7 @@ export const ingredients = [
     category: "CREAM",
   },
   {
-    id: 122,
+    id: 181,
     name: "Banana",
     src: "https://images.pixieset.com/69852402/33805c81ef11181cc1a3d76589b2096a-xxlarge.jpg",
     category: "SMOOTHIE_IN",
@@ -710,7 +704,7 @@ export const ingredients = [
     id: 130,
     name: "Acai",
     src: "https://images.pixieset.com/69852402/669a106263e4cacff8a8ce1422262614-xxlarge.jpg",
-    category: "SMOOTHIE_IN",
+    category: "SMOOTHIE_FROZEN",
   },
   {
     id: 131,
@@ -741,6 +735,270 @@ export const ingredients = [
     name: "Hemp Seed",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191040913/sm/Hemp%20Seed.jpg",
     category: "TOSS_IN",
+  },
+  {
+    id: 136,
+    name: "Arugula",
+    category: "GREEN_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Arugula.jpg",
+  },
+  {
+    id: 137,
+    name: "Spinach",
+    category: "GREEN_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Baby%20Spinach.jpg",
+  },
+  {
+    id: 138,
+    name: "Pesto Mushroom",
+    category: "PREMIUM_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Pesto%20Mushroom.jpg",
+  },
+  {
+    id: 139,
+    name: "Goat Cheese",
+    category: "PREMIUM_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/add%20goat%20cheese.jpg",
+  },
+  {
+    id: 140,
+    name: "Almond Butter",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/Almond%20Butter.jpg",
+    category: "PREMIUM_B",
+  },
+  {
+    id: 141,
+    name: "Cinnamon",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Cinnamon.jpg",
+    category: "TOSS_IN_B",
+  },
+  {
+    id: 142,
+    name: "Strawberry",
+    category: "PREMIUM_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/Strawberry.jpg",
+  },
+  {
+    id: 143,
+    name: "Blueberry",
+    category: "PREMIUM_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214215205758/sm/Blueberry.jpg",
+  },
+  {
+    id: 144,
+    name: "Chia Seeds",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Chia%20Seeds.jpg",
+    category: "TOSS_IN_B",
+  },
+  {
+    id: 145,
+    name: "Coconut Chips",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/Coconut.jpg",
+    category: "TOSS_IN_B",
+  },
+  {
+    id: 146,
+    name: "Apple",
+    category: "TOSS_IN_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191040913/sm/Green%20Apple.jpg",
+  },
+  {
+    id: 147,
+    name: "Mozzarella",
+    category: "PREMIUM_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/add%20mozzarella.jpg",
+  },
+  {
+    id: 148,
+    name: "Grape Tomato",
+    category: "TOSS_IN_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Grape%20Tomato.jpg",
+  },
+  {
+    id: 149,
+    name: "Red Bell Pepper",
+    category: "TOSS_IN_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/Red%20Bell%20Pepper.png",
+  },
+  {
+    id: 150,
+    name: "Pasture-Raised Egg",
+    category: "PREMIUM_B",
+    src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/American%20Fork%20-%20Pasture-Raised%20EggSM-66a408df_1.jpg",
+  },
+  {
+    id: 151,
+    name: "Roasted Onions",
+    category: "PREMIUM_B",
+    src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/American%20Fork%20-%20Roasted%20OnionSM-66a40040_1.jpg",
+  },
+  {
+    id: 152,
+    name: "Lime Tomato Vinaigrette",
+    category: "PREMIUM_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214215205758/sm/Lime%20Tomato%20Vinaigrette.jpg",
+  },
+  {
+    id: 153,
+    name: "Kale",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214215205758/sm/Kale.jpg",
+    category: "GREEN_B",
+  },
+  {
+    id: 154,
+    name: "Hemp Seed",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191040913/sm/Hemp%20Seed.jpg",
+    category: "TOSS_IN_B",
+  },
+  {
+    id: 155,
+    name: "Red Pepper Crushed",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "TOSS_IN_B",
+  },
+  {
+    id: 156,
+    name: "Housemade Granola",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/granola.jpg",
+    category: "TOSS_IN_B",
+  },
+  {
+    id: 157,
+    name: "Housemade Granola",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/granola.jpg",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 158,
+    name: "Cucumber",
+    category: "TOSS_IN_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/Cucumber.png",
+  },
+  {
+    id: 159,
+    name: "Avocado (half)",
+    category: "PREMIUM_B",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191040913/sm/add%20half%20an%20avocado.jpg",
+  },
+  {
+    id: 160,
+    name: "Coconut Whipped Cream",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 161,
+    name: "Strawberry",
+    category: "SMOOTHIE_IN",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/Strawberry.jpg",
+  },
+  {
+    id: 162,
+    name: "Vanilla Nice Cream",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_FROZEN",
+  },
+  {
+    id: 163,
+    name: "Chocolate Nice Cream",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_FROZEN",
+  },
+  {
+    id: 164,
+    name: "Blueberry",
+    category: "SMOOTHIE_IN",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214215205758/sm/Blueberry.jpg",
+  },
+  {
+    id: 165,
+    name: "Wake Up Call Bag",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_FROZEN",
+  },
+  {
+    id: 166,
+    name: "Strawberry Sauce",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 167,
+    name: "Cocoa Sauce",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 168,
+    name: "Orange Juice",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 169,
+    name: "Ginger",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 170,
+    name: "Brownie",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240207203144674/md/Brownie%20Bite%20%28GF%2C%20No%20added%20sugar%29.jpg",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 171,
+    name: "Turmeric",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 172,
+    name: "Coconut Water",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 173,
+    name: "Maca",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 174,
+    name: "Apple",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191040913/sm/Green%20Apple.jpg",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 175,
+    name: "Avocado",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191040913/sm/add%20half%20an%20avocado.jpg",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 176,
+    name: "Coconut Powder",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 177,
+    name: "Vanilla Extract",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 178,
+    name: "Mint",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 180,
+    name: "Chocolate Cookie",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240207203144674/md/Chocolate%20Chip%20Cookie%20%28GF%2C%20DF%2C%20No%20added%20sugar%29.jpg",
+    category: "SMOOTHIE_IN",
   },
 ];
 export type Ingredient = (typeof ingredients)[number];

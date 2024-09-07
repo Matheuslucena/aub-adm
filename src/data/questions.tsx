@@ -229,27 +229,6 @@ export const questions = [
     type: "Smoothie",
   },
   {
-    id: 13,
-    question: "Which of the following is not dairy free?",
-    options: [
-      { id: 1, text: "Nice milkshake" },
-      {
-        id: 2,
-        text: "nice-ookie",
-      },
-      {
-        id: 3,
-        text: "coco mint smoothie",
-      },
-      {
-        id: 4,
-        text: "strawberry glow",
-      },
-    ],
-    correct: 3,
-    type: "Smoothie",
-  },
-  {
     id: 14,
     question:
       "What are the Strawberry Lemonade, Cucumber Mint Lemonade, and the Pineapple Ginger Juice sweetened with?",
