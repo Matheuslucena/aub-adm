@@ -23,7 +23,7 @@ export default function Ingredients({
   onClearSelection: React.MouseEventHandler;
   onSend: React.MouseEventHandler;
 }) {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const ingredientsCategory = (category: string) => {
     const list = ingredients
@@ -65,9 +65,9 @@ export default function Ingredients({
 
   const handleSend = (e: any) => {
     onSend(e);
-    // if(scrollRef.current != null){
-    //   scrollRef.current?.getElementsByTagName("div")[0].scrollTo({ top: 0, behavior: "auto" });
-    // }
+    if (scrollRef.current != null) {
+      scrollRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -97,8 +97,11 @@ export default function Ingredients({
           Test Progress: {progress.current} / {progress.total}
         </div>
       </div>
-      <ScrollArea className="h-[calc(100vh-156px)]" ref={scrollRef}>
-        <div className="flex flex-col flex-wrap gap-2 p-4 pt-0 mt-4">
+      <ScrollArea className="h-[calc(100vh-156px)]">
+        <div
+          className="flex flex-col flex-wrap gap-2 p-4 pt-0 mt-4"
+          ref={scrollRef}
+        >
           {ingredientsListElements}
         </div>
         <ScrollBar orientation="horizontal" />
