@@ -1,6 +1,6 @@
 "use client";
 
-import { items as productsData } from "@/data/items";
+import { items, items as productsData } from "@/data/items";
 import { ingredients as ingredientsData } from "@/data/ingredients";
 import { useState, useEffect } from "react";
 import Ingredients from "./ingredients";
@@ -9,6 +9,7 @@ import ResultsDialog from "./resultsDialog";
 import InfoDialog from "./infoDialog";
 import { useInfoState } from "@/context/userInfoContext";
 import Quiz from "./quiz";
+import { useRouter } from "next/navigation";
 
 interface UserInfo {
   punchId: string;
@@ -17,6 +18,7 @@ interface UserInfo {
 }
 
 export default function Index() {
+  const router = useRouter();
   const { userInfoValue, setUserInfoState } = useInfoState();
   const [products, setProducts] = useState([...productsData]);
   const [ingredients, setIngredients] = useState([...ingredientsData]);
@@ -158,7 +160,20 @@ export default function Index() {
     const correctPercentage = (correctAnswers / answers.length) * 100;
 
     setScore(correctPercentage.toFixed(1));
-    setOpenAlert(true);
+    //setOpenAlert(true);
+
+    localStorage.setItem(
+      "score",
+      JSON.stringify({ menu: correctPercentage.toFixed(1), quiz: 0 })
+    );
+    localStorage.setItem(
+      "correct",
+      JSON.stringify(answers.filter((i) => i.correct))
+    );
+    localStorage.setItem(
+      "incorrect",
+      JSON.stringify(answers.filter((i) => !i.correct))
+    );
 
     const body = {
       date: new Date().toISOString(),
@@ -174,7 +189,10 @@ export default function Index() {
       body: JSON.stringify(body),
     })
       .then((response) => response.json())
-      .catch((error) => console.error("Error fetching data:", error));
+      .catch((error) => console.error("Error fetching data:", error))
+      .finally(() => {
+        router.push("/results");
+      });
   };
 
   const handleCloseResultsDialog = () => {
