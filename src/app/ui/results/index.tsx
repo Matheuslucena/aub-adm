@@ -44,7 +44,7 @@ export default function Index() {
 
   const correctElements = correct.map((item) => {
     return (
-      <div key={item.product.id} className="mb-1 p-1 text-left ">
+      <div key={item.product.id} className="mb-1 p-1 text-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -68,7 +68,7 @@ export default function Index() {
   const incorrectElements = incorrect.map((item) => {
     return (
       <div key={item.product.id} className="border w-1/6 text-left shadow-md">
-        <div className="py-2 px-2 font-bold border-b">
+        <div className="py-2 px-2 font-bold border-b bg-gray-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
