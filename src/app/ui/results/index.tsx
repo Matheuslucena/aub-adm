@@ -11,8 +11,8 @@ import { useEffect, useState } from "react";
 
 export default function Index() {
   const [score, setScore] = useState({ menu: 0, quiz: 0 });
-  const [correct, setCorrect] = useState([]);
-  const [incorrect, setIncorrect] = useState([]);
+  const [correct, setCorrect] = useState<any[]>([]);
+  const [incorrect, setIncorrect] = useState<any[]>([]);
   const [userInfo, setUserInfo] = useState({
     punchId: "",
     name: "",
