@@ -197,10 +197,9 @@ export default function Index() {
       body: JSON.stringify(body),
     })
       .then((response) => response.json())
-      .catch((error) => console.error("Error fetching data:", error))
-      .finally(() => {
-        router.push("/results");
-      });
+      .catch((error) => console.error("Error fetching data:", error));
+
+    router.push("/results");
   };
 
   const handleCloseResultsDialog = () => {
