@@ -34,6 +34,13 @@ export default function Index() {
     location: "",
   });
 
+  useEffect(() => {
+    localStorage.removeItem("user_info");
+    localStorage.removeItem("score");
+    localStorage.removeItem("correct");
+    localStorage.removeItem("incorrect");
+  }, []);
+
   const type = userInfoValue ? userInfoValue.type : "Server";
 
   //LIST OF ITEMS BY TYPE
@@ -174,6 +181,7 @@ export default function Index() {
       "incorrect",
       JSON.stringify(answers.filter((i) => !i.correct))
     );
+    localStorage.setItem("user_info", JSON.stringify(userInfoValue));
 
     const body = {
       date: new Date().toISOString(),

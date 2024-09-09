@@ -13,6 +13,12 @@ export default function Index() {
   const [score, setScore] = useState({ menu: 0, quiz: 0 });
   const [correct, setCorrect] = useState([]);
   const [incorrect, setIncorrect] = useState([]);
+  const [userInfo, setUserInfo] = useState({
+    punchId: "",
+    name: "",
+    location: "",
+    type: "",
+  });
 
   useEffect(() => {
     let local = localStorage.getItem("score");
@@ -28,6 +34,11 @@ export default function Index() {
     local = localStorage.getItem("incorrect");
     if (local !== null) {
       setIncorrect(JSON.parse(local));
+    }
+
+    local = localStorage.getItem("user_info");
+    if (local !== null) {
+      setUserInfo(JSON.parse(local));
     }
   }, []);
 
@@ -114,10 +125,10 @@ export default function Index() {
         RESULTS
       </h1>
       <div className="pt-6">
-        <div>Punch ID: 1234</div>
-        <div>Name: Matheus</div>
-        <div>Location: St. George</div>
-        <div>Training: Server</div>
+        <div>Punch ID: {userInfo.punchId}</div>
+        <div>Name: {userInfo.name}</div>
+        <div>Location: {userInfo.location}</div>
+        <div>Training: {userInfo.type}</div>
       </div>
       <div className="flex flex-col justify-center text-center">
         <div className="py-10 flex gap-6 justify-center">
