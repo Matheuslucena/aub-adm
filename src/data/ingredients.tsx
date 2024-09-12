@@ -170,7 +170,7 @@ export const ingredients = [
     id: 22,
     name: "peanut dressing [has nuts]",
     category: "DRESSING",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Spicy%20Cashew%20Dressing%20%28gf%2C%20vegan%29.jpg",
   },
   {
     id: 23,
@@ -181,7 +181,7 @@ export const ingredients = [
   {
     id: 24,
     name: "Cheesebread",
-    category: "BREAD_HIDE",
+    category: "BREAD",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/Gluten-free%20cheesebread.jpg",
   },
   {
@@ -230,7 +230,7 @@ export const ingredients = [
     id: 35,
     name: "Carrot",
     category: "TOSS_IN",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214215205758/sm/Carrot.jpg",
+    src: "/shredded_carrots.png",
   },
   {
     id: 36,
@@ -259,7 +259,7 @@ export const ingredients = [
   {
     id: 41,
     name: "Pumpkin Seeds",
-    category: "TOSS_IN",
+    category: "PREMIUM",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/pumpkin%20seeds.jpg",
   },
   {
@@ -278,7 +278,7 @@ export const ingredients = [
     id: 44,
     name: "Parmesan Crisp",
     category: "PREMIUM",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214191025893/sm/add%20parmesan%20crisp.jpg",
+    src: "/parmesan_crisp.png",
   },
   {
     id: 45,
@@ -379,7 +379,7 @@ export const ingredients = [
   {
     id: 65,
     name: "Sliced Almonds",
-    category: "TOSS_IN",
+    category: "PREMIUM",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240212230852362/sm/Sliced%20Almonds.jpg",
   },
   {
@@ -523,8 +523,8 @@ export const ingredients = [
   {
     id: 100,
     name: "Slivered Almond",
-    category: "TOSS_IN",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240212230852362/sm/Sliced%20Almonds.jpg",
+    category: "PREMIUM",
+    src: "/slivered_almonds.png",
   },
   {
     id: 101,
@@ -709,7 +709,7 @@ export const ingredients = [
   {
     id: 131,
     name: "Ice",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/ice.png",
     category: "SMOOTHIE_FROZEN",
   },
   {
@@ -853,7 +853,7 @@ export const ingredients = [
   {
     id: 155,
     name: "Red Pepper Crushed",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/red_pepper_crushed.png",
     category: "TOSS_IN_B",
   },
   {
@@ -883,7 +883,7 @@ export const ingredients = [
   {
     id: 160,
     name: "Coconut Whipped Cream",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/whipped_cream.png",
     category: "SMOOTHIE_IN",
   },
   {
@@ -895,13 +895,13 @@ export const ingredients = [
   {
     id: 162,
     name: "Vanilla Nice Cream",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/vanila_ice.png",
     category: "SMOOTHIE_FROZEN",
   },
   {
     id: 163,
     name: "Chocolate Nice Cream",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/cocoa_ice.png",
     category: "SMOOTHIE_FROZEN",
   },
   {
@@ -931,13 +931,13 @@ export const ingredients = [
   {
     id: 168,
     name: "Orange Juice",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/orange_juice.jpg",
     category: "SMOOTHIE_IN",
   },
   {
     id: 169,
     name: "Ginger",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/ginger.png",
     category: "SMOOTHIE_IN",
   },
   {
@@ -949,19 +949,19 @@ export const ingredients = [
   {
     id: 171,
     name: "Turmeric",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/turmeric.png",
     category: "SMOOTHIE_IN",
   },
   {
     id: 172,
     name: "Coconut Water",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/coconut_water.png",
     category: "SMOOTHIE_IN",
   },
   {
     id: 173,
     name: "Maca",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/maca.png",
     category: "SMOOTHIE_IN",
   },
   {
@@ -979,19 +979,19 @@ export const ingredients = [
   {
     id: 176,
     name: "Coconut Powder",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/coconut_powder.png",
     category: "SMOOTHIE_IN",
   },
   {
     id: 177,
     name: "Vanilla Extract",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/vanilla.png",
     category: "SMOOTHIE_IN",
   },
   {
     id: 178,
     name: "Mint",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/mint.png",
     category: "SMOOTHIE_IN",
   },
   {
@@ -1015,7 +1015,7 @@ export const ingredients = [
   {
     id: 183,
     name: "Paprika",
-    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+    src: "/paprika.png",
     category: "TOSS_IN",
   },
 ];

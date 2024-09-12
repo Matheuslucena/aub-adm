@@ -29,15 +29,22 @@ export default function Quiz({
   testType: any;
 }) {
   const [questions, setQuestions] = useState([...questionsData]);
-  const [formData, setFormData] = useState({
-    id: "",
-  });
+  const [formData, setFormData] = useState({});
+
+  const answers: { [key: string]: any } = questions.reduce((acc, cur) => {
+    acc[cur.id + ""] = cur.correct;
+    return acc;
+  }, {} as { [key: string]: any });
 
   const handleChange = (e: any) => {
-    const { id, value } = e.target;
+    let value = e.split("-");
     setFormData((prevData) => ({
       ...prevData,
-      [id]: value,
+      [value[0]]: {
+        question: value[1],
+        answered: value[3],
+        correct: value[2] == answers[value[0]],
+      },
     }));
   };
 
@@ -48,18 +55,20 @@ export default function Quiz({
     .map((q) => {
       return (
         <div key={q.id} className="mb-4">
-          <Label htmlFor="punchId" className="text-right">
+          <Label htmlFor={"q-" + q.id} className="text-right">
             {q.question}
           </Label>
-          <RadioGroup>
+          <RadioGroup onValueChange={handleChange}>
             {q.options.map((opt) => {
               return (
                 <div key={opt.id} className="flex items-center space-x-2">
                   <RadioGroupItem
-                    value={opt.id + "-" + opt.text}
-                    id={"opt" + opt.id}
+                    value={
+                      q.id + "-" + q.question + "-" + opt.id + "-" + opt.text
+                    }
+                    id={"q-" + q.id + "-" + opt.id}
                   />
-                  <Label htmlFor={"opt" + opt.id}>{opt.text}</Label>
+                  <Label htmlFor={"q-" + q.id + "-" + opt.id}>{opt.text}</Label>
                 </div>
               );
             })}

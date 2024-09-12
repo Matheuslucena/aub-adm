@@ -28,8 +28,11 @@ const handler: Handler = async (event, context) => {
         data.id,
         data.employee,
         data.score,
+        data.quizScore,
         data.location,
+        data.type,
         JSON.stringify(data.answers),
+        JSON.stringify(data.quiz),
       ],
     ];
 

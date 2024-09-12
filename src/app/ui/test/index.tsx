@@ -39,6 +39,7 @@ export default function Index() {
     localStorage.removeItem("score");
     localStorage.removeItem("correct");
     localStorage.removeItem("incorrect");
+    localStorage.removeItem("quiz");
   }, []);
 
   const type = userInfoValue ? userInfoValue.type : "Server";
@@ -161,17 +162,31 @@ export default function Index() {
     setOpenQuiz(true);
   };
 
-  const showResults = () => {
-    console.log("ANSWER ==== ", JSON.stringify(answers));
+  const showResults = (quizResults: any) => {
+    //console.log("ANSWER ==== ", JSON.stringify(answers));
     const correctAnswers = answers.filter((item) => item.correct).length;
     const correctPercentage = (correctAnswers / answers.length) * 100;
+
+    const quizQuestions = Object.keys(quizResults).map((id) => ({
+      id,
+      ...quizResults[id],
+    }));
+    const correctQuiz = quizQuestions.filter(
+      (item: { correct: any }) => item.correct
+    );
+
+    const correctQuizPercentage =
+      (correctQuiz.length / quizQuestions.length) * 100;
 
     setScore(correctPercentage.toFixed(1));
     //setOpenAlert(true);
 
     localStorage.setItem(
       "score",
-      JSON.stringify({ menu: correctPercentage.toFixed(1), quiz: 0 })
+      JSON.stringify({
+        menu: correctPercentage.toFixed(1),
+        quiz: correctQuizPercentage.toFixed(1),
+      })
     );
     localStorage.setItem(
       "correct",
@@ -182,16 +197,21 @@ export default function Index() {
       JSON.stringify(answers.filter((i) => !i.correct))
     );
     localStorage.setItem("user_info", JSON.stringify(userInfoValue));
+    localStorage.setItem("quiz", JSON.stringify(quizQuestions));
 
     const body = {
       date: new Date().toISOString(),
       id: userInfoValue.punchId,
       employee: userInfoValue.name,
       score: correctPercentage.toFixed(2),
+      quizScore: correctQuizPercentage.toFixed(2),
       location: userInfoValue.location,
       type: userInfoValue.type,
       answers: [...answers],
+      quiz: quizQuestions,
     };
+
+    console.info(body);
     fetch("/.netlify/functions/hello", {
       method: "POST",
       body: JSON.stringify(body),
@@ -216,9 +236,9 @@ export default function Index() {
     //Restart test
   };
 
-  const handleSubmitQuiz = () => {
+  const handleSubmitQuiz = (results: any) => {
     setOpenQuiz(false);
-    showResults();
+    showResults(results);
   };
 
   const handleStartTest = (data: any) => {

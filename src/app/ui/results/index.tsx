@@ -7,12 +7,18 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import { useEffect, useState } from "react";
 
 export default function Index() {
   const [score, setScore] = useState({ menu: 0, quiz: 0 });
   const [correct, setCorrect] = useState<any[]>([]);
   const [incorrect, setIncorrect] = useState<any[]>([]);
+  const [quiz, setQuiz] = useState<any[]>([]);
   const [userInfo, setUserInfo] = useState({
     punchId: "",
     name: "",
@@ -40,6 +46,11 @@ export default function Index() {
     if (local !== null) {
       setUserInfo(JSON.parse(local));
     }
+
+    local = localStorage.getItem("quiz");
+    if (local !== null) {
+      setQuiz(JSON.parse(local));
+    }
   }, []);
 
   const correctElements = correct.map((item) => {
@@ -49,7 +60,7 @@ export default function Index() {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
           className="size-6 inline-block text-green-900 mr-2"
         >
@@ -65,15 +76,60 @@ export default function Index() {
     );
   });
 
-  const incorrectElements = incorrect.map((item) => {
+  const quizInfo = quiz.map((item) => {
     return (
-      <div key={item.product.id} className="border w-1/6 text-left shadow-md">
-        <div className="py-2 px-2 font-bold border-b bg-gray-100">
+      <div key={item.id} className="mb-1 p-1 text-left flex">
+        {item.correct ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="size-6 inline-block text-green-900 mr-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="size-6 inline-block text-red-900 mr-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        )}
+        <div>
+          <div>Question: {item.question}</div>
+          <div>Answered: {item.answered}</div>
+        </div>
+      </div>
+    );
+  });
+
+  const incorrectElements = incorrect.map((item) => {
+    return (
+      <div
+        key={item.product.id}
+        className="border w-1/6 text-left shadow-md bg-white"
+      >
+        <div className="py-2 px-2 font-bold border-b bg-gray-50">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
             stroke="currentColor"
             className="size-6 inline-block text-red-900 mr-2"
           >
@@ -141,22 +197,38 @@ export default function Index() {
             <h1 className="text-3xl font-bold">{score.quiz}%</h1>
           </div>
         </div>
-        <Tabs defaultValue="correct" className="">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="correct">
-              Correct ({correct.length})
-            </TabsTrigger>
-            <TabsTrigger value="incorrect">
-              Incorrect ({incorrect.length})
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent value="correct">{correctElements}</TabsContent>
-          <TabsContent value="incorrect">
-            <div className="flex flex-row flex-wrap gap-6">
-              {incorrectElements}
-            </div>
-          </TabsContent>
-        </Tabs>
+        <div className="text-left">
+          <Collapsible className="border mb-2 py-4 px-2 shadow-md bg-gray-100">
+            <CollapsibleTrigger className="w-full text-left">
+              Correct Items ({correct.length})
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <div className="mt-4 flex flex-row flex-wrap gap-6">
+                {correctElements}
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
+          <Collapsible className="border mb-2 py-4 px-2 shadow-md bg-gray-100">
+            <CollapsibleTrigger className="w-full text-left">
+              Incorrect Items ({incorrect.length})
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <div className="mt-4 flex flex-row flex-wrap gap-6">
+                {incorrectElements}
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
+          <Collapsible className="border mb-2 py-4 px-2 shadow-md bg-gray-100">
+            <CollapsibleTrigger className="w-full text-left">
+              Quiz Answers
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <div className="mt-4 flex flex-col flex-wrap gap-6">
+                {quizInfo}
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
+        </div>
       </div>
     </div>
   );

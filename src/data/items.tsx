@@ -121,7 +121,7 @@ export const items = [
   {
     id: 17,
     name: "Garden Delight (V)",
-    desc: "arugula, kale, radish, cucumber, chickpeas, pomegranate seeds, pumpkin seeds, grape tomato, red bell pepper, avocado (half), red onion, basil, Walnut Balsamic (GF V) [has nuts].",
+    desc: "arugula, kale, radish, cucumber, chickpeas, pomegranate seeds, pumpkin seeds, grape tomato, avocado (half), red onion, basil, Walnut Balsamic (GF V) [has nuts].",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240221192257452/md/Garden%20Delight%20%28V%29.jpg",
     category: "SALAD",
   },
@@ -219,7 +219,7 @@ export const items = [
   {
     id: 32,
     name: "Hot Steak",
-    desc: "tri-tip steak, mozzarella, whole wheat pita, tomato vinaigrette, cilantro jalapeno cashew (GF DF) [has nuts]",
+    desc: "tri-tip steak, mozzarella, whole wheat pita, lime tomato vinaigrette, cilantro jalapeno cashew (GF DF) [has nuts]",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240221192257452/md/Hot%20Steak%20Melt.jpg",
     category: "MELTS",
   },
@@ -331,7 +331,7 @@ export const items = [
   {
     id: 48,
     name: "Exotic Dip Plate",
-    desc: "falafel, hummus, baba ghanoush, muhammara, whole wheat pita, chickpeas, paprika, microgreens, pomegranate, kalamata olive, Extra Virgin Olive Oil",
+    desc: "baked falafel, hummus, baba ghanoush, muhammara, whole wheat pita, chickpeas, paprika, microgreens, pomegranate seeds, kalamata olive, Extra Virgin Olive Oil",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240221192257452/md/Exotic%20Dip%20Plate.jpg",
     category: "STARTERS",
   },
@@ -742,14 +742,14 @@ export const items = [
   {
     id: 113,
     name: "Avocado Smash Toast [nuts]",
-    desc: "sourdough bread, cashew cream, avocado smash, cucumber, grape tomato, hemp seed, extra virgin olive oil, microgreens",
+    desc: "sourdough bread, cashew cream, avocado smash, Red Pepper Crushed, cucumber, grape tomato, hemp seed, extra virgin olive oil, microgreens",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240208010514219/sm/Avocado%20Smash%20Toast.jpg",
     category: "BREAKFAST",
   },
   {
     id: 114,
     name: "Almond Berry Toast [nuts]",
-    desc: "sourdough bread, almond butter, cinnamon, strawberry, blueberry, coconut chips, chia seeds, cashew cream",
+    desc: "sourdough bread, almond butter, cinnamon, strawberry, blueberry, coconut chips, chia seeds",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240208010514219/sm/Almond%20Berry%20Toast.jpg",
     category: "BREAKFAST",
   },
@@ -763,7 +763,7 @@ export const items = [
   {
     id: 117,
     name: "Overnight Oats [nuts]",
-    desc: "Housemade granola, coconut chips, chia seeds, strawberry, blueberry, apple, almond butter",
+    desc: "Housemade granola, strawberry, blueberry, apple, almond butter",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240208010514219/sm/Overnight%20Oats.jpg",
     category: "BREAKFAST",
   },
@@ -777,14 +777,14 @@ export const items = [
   {
     id: 119,
     name: "Veggie Omelette",
-    desc: "pasture-raised eggs, spinach, mozzarella, red bell pepper, green onions, avocado smash, Signature Sesame (GF V), sourdough bread",
+    desc: "pasture-raised eggs, spinach, mozzarella, red bell pepper, green onions, avocado smash, sourdough bread",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240208010514219/sm/Veggie%20Omelette.jpg",
     category: "BREAKFAST",
   },
   {
     id: 120,
     name: "Egg Sandwich [nuts]",
-    desc: "sourdough bread, avocado smash, spinach, mozzarella, grape tomato, red bell pepper, pasture-raised eggs, Cilantro Jalapeno Cashew (GF DF) [has nuts]",
+    desc: "sourdough bread, avocado smash, spinach, mozzarella, Red Pepper Crushed, grape tomato, red bell pepper, pasture-raised eggs, Cilantro Jalapeno Cashew (GF DF) [has nuts]",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240208010514219/sm/Egg%20Sandwich.jpg",
     category: "BREAKFAST",
   },

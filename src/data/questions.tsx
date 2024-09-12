@@ -78,35 +78,6 @@ export const questions = [
     type: "Server",
   },
   {
-    id: 6,
-    question: "Please select all items that contain nuts?",
-    options: [
-      { id: 1, text: "Dream salad" },
-      {
-        id: 2,
-        text: "Mediterranea bowl",
-      },
-      {
-        id: 3,
-        text: "Gluten free mac n cheese",
-      },
-      {
-        id: 4,
-        text: "Rio bowl",
-      },
-      {
-        id: 5,
-        text: "Avocado cashew melt",
-      },
-      {
-        id: 6,
-        text: "Brazilian acai",
-      },
-    ],
-    correct: [1, 3, 4, 6],
-    type: "Server",
-  },
-  {
     id: 7,
     question: "Which categories on our menu are not gluten-free?",
     options: [
@@ -248,31 +219,6 @@ export const questions = [
       },
     ],
     correct: 3,
-    type: "Smoothie",
-  },
-  {
-    id: 15,
-    question: "Please select all items that contain nuts?",
-    options: [
-      { id: 1, text: "Hi-vibe" },
-      {
-        id: 2,
-        text: "Banana monkey",
-      },
-      {
-        id: 3,
-        text: "Hot chocolate",
-      },
-      {
-        id: 4,
-        text: "Cucumber mint lemonade",
-      },
-      {
-        id: 5,
-        text: "Nice cream",
-      },
-    ],
-    correct: [1, 3, 5],
     type: "Smoothie",
   },
   {
