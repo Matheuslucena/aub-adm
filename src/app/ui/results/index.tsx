@@ -122,7 +122,7 @@ export default function Index() {
     return (
       <div
         key={item.product.id}
-        className="border w-1/6 text-left shadow-md bg-white"
+        className="border xs:w-full sm:w-full lg:w-1/6 text-left shadow-md bg-white"
       >
         <div className="py-2 px-2 font-bold border-b bg-gray-50">
           <svg
