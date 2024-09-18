@@ -1018,5 +1018,17 @@ export const ingredients = [
     src: "/paprika.png",
     category: "TOSS_IN",
   },
+  {
+    id: 184,
+    name: "Oats",
+    src: "/overnight.jpg",
+    category: "SMOOTHIE_IN",
+  },
+  {
+    id: 185,
+    name: "Frozen Blueberry",
+    category: "SMOOTHIE_FROZEN",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214215205758/sm/Blueberry.jpg",
+  },
 ];
 export type Ingredient = (typeof ingredients)[number];

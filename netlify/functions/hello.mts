@@ -28,6 +28,7 @@ const handler: Handler = async (event, context) => {
         data.id,
         data.employee,
         data.score,
+        data.menuScore,
         data.quizScore,
         data.location,
         data.type,

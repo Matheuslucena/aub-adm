@@ -163,10 +163,6 @@ export default function Index() {
   };
 
   const showResults = (quizResults: any) => {
-    //console.log("ANSWER ==== ", JSON.stringify(answers));
-    const correctAnswers = answers.filter((item) => item.correct).length;
-    const correctPercentage = (correctAnswers / answers.length) * 100;
-
     const quizQuestions = Object.keys(quizResults).map((id) => ({
       id,
       ...quizResults[id],
@@ -174,6 +170,15 @@ export default function Index() {
     const correctQuiz = quizQuestions.filter(
       (item: { correct: any }) => item.correct
     );
+    //console.log("ANSWER ==== ", JSON.stringify(answers));
+    const correctAnswers = answers.filter((item) => item.correct).length;
+
+    const menuSore = (correctAnswers / answers.length) * 100;
+    //SUM QUIZ AND MENU SCORE
+    const correctPercentage =
+      ((correctAnswers + correctQuiz.length) /
+        (answers.length + quizQuestions.length)) *
+      100;
 
     const correctQuizPercentage =
       (correctQuiz.length / quizQuestions.length) * 100;
@@ -204,6 +209,7 @@ export default function Index() {
       id: userInfoValue.punchId,
       employee: userInfoValue.name,
       score: correctPercentage.toFixed(2),
+      menuScore: menuSore.toFixed(2),
       quizScore: correctQuizPercentage.toFixed(2),
       location: userInfoValue.location,
       type: userInfoValue.type,
