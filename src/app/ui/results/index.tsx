@@ -189,13 +189,13 @@ export default function Index() {
       <div className="flex flex-col justify-center text-center">
         <div className="py-10 flex gap-6 justify-center">
           <div className="border p-5 rounded shadow-md flex flex-col">
-            <div>Menu Score</div>
+            <div>Score</div>
             <h1 className="text-3xl font-bold">{score.menu}%</h1>
           </div>
-          <div className="border p-5 rounded shadow-md flex flex-col">
+          {/* <div className="border p-5 rounded shadow-md flex flex-col">
             <div>Quiz Score</div>
             <h1 className="text-3xl font-bold">{score.quiz}%</h1>
-          </div>
+          </div> */}
         </div>
         <div className="text-left">
           <Collapsible className="border mb-2 py-4 px-2 shadow-md bg-gray-100">
