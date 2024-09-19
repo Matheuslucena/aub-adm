@@ -23,7 +23,7 @@ export const items = [
   {
     id: 3,
     name: "Tri-tip Madeira (GF)",
-    desc: "tri-tip steak, seasoned kale, turmeric rice, brussels sprouts, baked sweet potato bites, fresh mushroom and peppercorn madeira sauce, microgreens, Cheesebread",
+    desc: "tri-tip steak, seasoned kale, turmeric rice, brussels sprouts, baked sweet potato, madeira sauce, microgreens, Cheesebread",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240207201944290/md/Tri-tip%20Madeira%20Bowl%20%28GF%29.jpg",
     category: "BOWL",
   },
@@ -37,7 +37,7 @@ export const items = [
   {
     id: 5,
     name: "Mango Salmon Bowl (GF, DF)",
-    desc: "seasoned kale, quinoa, wild salmon, red cabbage salad, pesto mushroom, roasted cauliflower, mango salsa, microgreens, Cilantro Jalapeno Cashew (GF DF) [has nuts], Cheesebread",
+    desc: "seasoned kale, quinoa, wild salmon, red cabbage salad, pesto mushroom, cauliflower, mango salsa, microgreens, Cilantro Jalapeno Cashew (GF DF) [has nuts], Cheesebread",
     src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/American%20Fork%20-%20Mango%20Salmon%20BowlMD-663081ef_1-md.jpg",
     category: "BOWL",
   },
@@ -114,7 +114,7 @@ export const items = [
   {
     id: 16,
     name: "Dream (GF)",
-    desc: "chicken, romaine, baby spinach, red onions, green apples, walnuts, parmesan cheese, grape tomato, red bell pepper, basil, Cilantro Jalapeno Cashew (GF DF) [has nuts], Cheesebread",
+    desc: "chicken, romaine, baby spinach, red onions, green apples, walnuts, parmesan, grape tomato, red bell pepper, basil, Cilantro Jalapeno Cashew (GF DF) [has nuts], Cheesebread",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240221192257452/md/Dream%20%28GF%29.jpg",
     category: "SALAD",
   },
@@ -156,14 +156,14 @@ export const items = [
   {
     id: 22,
     name: "Very Berry (GF)",
-    desc: "kale, romaine, chicken, goat cheese, organic quinoa, green apple, strawberry, blueberry, basil, Sweet & Spicy Mango (GF V), Cheesebread",
+    desc: "kale, romaine, chicken, goat cheese, quinoa, green apple, strawberry, blueberry, basil, Sweet & Spicy Mango (GF V), Cheesebread",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240221192257452/md/Very%20Berry%20Salad%20%28GF%29.jpg",
     category: "SALAD",
   },
   {
     id: 23,
     name: "Tri-Tip (GF)",
-    desc: "tri-tip steak, romaine, baby spinach, red onions, green apples, walnuts, parmesan cheese, grape tomato, red bell peppers, basil, Cilantro Jalapeno Cashew (GF DF) [has nuts], Cheesebread",
+    desc: "tri-tip steak, romaine, baby spinach, red onions, green apples, walnuts, parmesan, grape tomato, red bell peppers, basil, Cilantro Jalapeno Cashew (GF DF) [has nuts], Cheesebread",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240221192257452/md/Tri-Tip%20Salad%20%28GF%29.jpg",
     category: "SALAD",
   },

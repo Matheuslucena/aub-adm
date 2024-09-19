@@ -27,16 +27,16 @@ export const questions = [
   },
   {
     id: 3,
-    question: "What is our gluten-free policy?",
+    question: "What is our gluten free policy?",
     options: [
-      { id: 1, text: "We are a completely gluten-free environment" },
+      { id: 1, text: "We are a completely gluten free environment" },
       {
         id: 2,
-        text: "We have lots of gluten-free options, but we do not guarantee no cross-contamination",
+        text: "We have lots of gluten free options, but we do not guarantee no cross contamination",
       },
       {
         id: 3,
-        text: "We don't offer any gluten-free items",
+        text: "We don't offer any gluten free items",
       },
     ],
     correct: 2,
@@ -44,7 +44,7 @@ export const questions = [
   },
   {
     id: 4,
-    question: "Is the cheese bread gluten-free?",
+    question: "Is the cheese bread gluten free?",
     options: [
       { id: 1, text: "Yes" },
       {
@@ -79,7 +79,7 @@ export const questions = [
   },
   {
     id: 7,
-    question: "Which categories on our menu are not gluten-free?",
+    question: "Which categories on our menu are not gluten free?",
     options: [
       { id: 1, text: "Sandwiches" },
       {
@@ -100,7 +100,7 @@ export const questions = [
   },
   {
     id: 8,
-    question: "Is the avocado cashew melt vegan, vegetarian or gluten-free?",
+    question: "Is the avocado cashew melt vegan, vegetarian or gluten free?",
     options: [
       { id: 1, text: "Vegan" },
       {
@@ -109,7 +109,7 @@ export const questions = [
       },
       {
         id: 3,
-        text: "gluten-free",
+        text: "gluten free",
       },
       {
         id: 4,
@@ -142,7 +142,7 @@ export const questions = [
   },
   {
     id: 10,
-    question: "Are the baked chicken bites vegan, vegetarian or gluten-free?",
+    question: "Are the baked chicken bites vegan, vegetarian or gluten free?",
     options: [
       { id: 1, text: "Vegan" },
       {
@@ -151,7 +151,7 @@ export const questions = [
       },
       {
         id: 3,
-        text: "gluten-free",
+        text: "gluten free",
       },
       {
         id: 4,
@@ -185,7 +185,7 @@ export const questions = [
       { id: 1, text: "Nice milkshake" },
       {
         id: 2,
-        text: "nice-ookie",
+        text: "nice ookie",
       },
       {
         id: 3,
@@ -333,7 +333,7 @@ export const questions = [
     type: "Smoothie",
   },
   {
-    id: 21,
+    id: 22,
     question: "Which of our dressings does not contain olive oil?",
     options: [
       { id: 1, text: "mango, walnut balsamic, signature " },
@@ -350,7 +350,7 @@ export const questions = [
     type: "Smoothie",
   },
   {
-    id: 22,
+    id: 23,
     question: "Our desserts are sweetened with?",
     options: [
       { id: 1, text: "dates, monk fruit, stevia" },

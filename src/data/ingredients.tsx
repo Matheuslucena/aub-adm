@@ -1001,7 +1001,7 @@ export const ingredients = [
     category: "SMOOTHIE_IN",
   },
   {
-    id: 181,
+    id: 186,
     name: "Walnut Pesto",
     src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/Riverton%20-%20Signature%20Sesame%20%28GF%2C%20V%29SM-66625b60_1.jpg",
     category: "PREMIUM",
