@@ -69,13 +69,10 @@ export default function Ingredients({
     if (scrollRef.current != null) {
       scrollRef.current.scrollIntoView({ behavior: "smooth" });
     }
-    if (scrollMainRef.current != null) {
-      scrollMainRef.current.scrollIntoView({ behavior: "smooth" });
-    }
   };
 
   return (
-    <div className="flex flex-col h-100vh" ref={scrollRef}>
+    <div className="flex flex-col h-100vh" ref={scrollMainRef}>
       <div className="relative p-4 border-b flex h-16 stic">
         <h1 className=" truncate text-wrap text-2xl font-semibold text-gray-900">
           {product.name}

@@ -1021,7 +1021,7 @@ export const ingredients = [
   {
     id: 184,
     name: "Oats",
-    src: "/overnight.jpg",
+    src: "/overnight.png",
     category: "PREMIUM_B",
   },
   {

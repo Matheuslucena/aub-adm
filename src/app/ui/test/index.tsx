@@ -254,7 +254,7 @@ export default function Index() {
 
   return (
     <>
-      <div className="grid lg:grid-cols-5 h-full">
+      <div className="grid lg:grid-cols-5 h-full overflow-hidden">
         <div className="lg:border-r lg:col-span-1 hidden md:block">
           <div className="flex flex-col h-full">
             <Selected
