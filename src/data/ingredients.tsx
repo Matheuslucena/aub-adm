@@ -1030,5 +1030,29 @@ export const ingredients = [
     category: "SMOOTHIE_FROZEN",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240214215205758/sm/Blueberry.jpg",
   },
+  {
+    id: 186,
+    name: "Thai sauce",
+    category: "PREMIUM",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+  },
+  {
+    id: 187,
+    name: "House Salad",
+    category: "PREMIUM",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+  },
+  {
+    id: 188,
+    name: "Sticky carrots",
+    category: "TOSS_IN",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+  },
+  {
+    id: 189,
+    name: "Zaatar sauce",
+    category: "PREMIUM",
+    src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240220193239046/sm/No%20Base.png",
+  },
 ];
 export type Ingredient = (typeof ingredients)[number];
