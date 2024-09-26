@@ -763,7 +763,7 @@ export const items = [
   {
     id: 117,
     name: "Overnight Oats [nuts]",
-    desc: "Housemade granola, strawberry, blueberry, apple, almond butter, oats",
+    desc: "Housemade granola, strawberry, blueberry, apple, almond butter, oats, pomegranate",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240208010514219/sm/Overnight%20Oats.jpg",
     category: "BREAKFAST",
   },
