@@ -855,9 +855,16 @@ export const items = [
   {
     id: 129,
     name: "Hummus Plate",
-    desc: "hummus, sticky carrots, cucumber, radish, whole wheat pita, zaatar.",
+    desc: "hummus, sticky carrots, cucumber, radish, whole wheat pita, zaatar",
     src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/American%20Fork%20-%20Hummus%20PlateSM-66f2681d_1.jpg",
     category: "STARTERS",
+  },
+  {
+    id: 130,
+    name: "Pumpkin Smoothie",
+    desc: "housemade cashew milk, pumpkin puree, frozen banana, almond butter, dates, cinnamon, flax seeds, vanilla extract, ice, housemade granola, coconut whipped cream",
+    src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/American%20Fork%20-%20Super%20Protein%20Berry%20%28GF%2C%20V%29MD-65dbe3cd_1-md.jpg",
+    category: "SMOOTHIE",
   },
 ];
 export type Item = (typeof items)[number];
