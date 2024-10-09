@@ -18,7 +18,7 @@ export const items = [
     name: "Better Earth (GF, V)",
     desc: "seasoned kale, quinoa, pesto mushroom, broccoli, roasted onions, carrot salad, red cabbage salad, avocado (half), cilantro, microgreens, Sweet & Spicy Mango (GF V), Cheesebread",
     src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/American%20Fork%20-%20Better%20Earth%20%28GF%2C%20V%29MD-65fdba80_1-md.jpg",
-    category: "BOWL",
+    category: "BOWL_OLD",
   },
   {
     id: 3,
@@ -102,7 +102,7 @@ export const items = [
     name: "Whole 30 Bowl (GF, DF)",
     desc: "seasoned kale, cauliflower rice, chicken, lime tomato vinaigrette, baked sweet potato, brussels sprouts, microgreens, Spicy Cashew (GF V), Cheesebread",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240221192257452/md/Whole%2030%20Bowl%20%28GF%2C%20DF%29.jpg",
-    category: "BOWL",
+    category: "BOWL_OLD",
   },
   {
     id: 15,
@@ -361,7 +361,7 @@ export const items = [
     name: "Inspiration Acai Bowl (GF, DF)",
     desc: "acai, housemade granola, strawberry, blueberry",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240221192257452/md/Inspiration%20Acai%20Bowl%20%28GF%2C%20DF%29.jpg",
-    category: "SMOOTHIE_ICE",
+    category: "SMOOTHIE_ICE_OLD",
   },
   {
     id: 54,
@@ -457,7 +457,7 @@ export const items = [
   },
   {
     id: 68,
-    name: "Nice-ookie (No added sugar)",
+    name: "Nice ookie (No added sugar)",
     desc: "chocolate cookie, vanilla nice cream, coconut whipped cream, cocoa sauce, strawberry",
     src: "https://incentivio.s3.amazonaws.com/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/20240221192257452/md/Nice-ookie%20%28No%20added%20sugar%29.jpg",
     category: "SMOOTHIE_ICE",
@@ -798,14 +798,7 @@ export const items = [
   {
     id: 122,
     name: "Chicken Spaghetti Squash",
-    desc: "Spaghetti Squash with European Sauce, Signature Chicken with a pinch of Microgreens.",
-    src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/American%20Fork%20-%20Chicken%20Spaghetti%20SquashSM-66f261ec_1.jpg",
-    category: "BOWL",
-  },
-  {
-    id: 122,
-    name: "Chicken Spaghetti Squash",
-    desc: "Spaghetti Squash with European Sauce, Chicken, Microgreens",
+    desc: "Chicken, Microgreens, cheesebread",
     src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/American%20Fork%20-%20Chicken%20Spaghetti%20SquashSM-66f261ec_1.jpg",
     category: "BOWL",
   },
@@ -861,7 +854,7 @@ export const items = [
   },
   {
     id: 130,
-    name: "Pumpkin Smoothie",
+    name: "Pumpkin Pie Smoothie",
     desc: "housemade cashew milk, pumpkin puree, frozen banana, almond butter, dates, cinnamon, flax seeds, vanilla extract, ice, housemade granola, coconut whipped cream",
     src: "https://s3.amazonaws.com/incentivio/e0dd160f-773f-4cb0-bd8f-e4e43818469a/i/American%20Fork%20-%20Super%20Protein%20Berry%20%28GF%2C%20V%29MD-65dbe3cd_1-md.jpg",
     category: "SMOOTHIE",
